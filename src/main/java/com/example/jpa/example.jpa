@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="com.example.jpa.student" epkg="domain" v="5.4.2" rws="_163724529033510" Pws="_163724529033510" cws="_163724529033510" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16372452903359" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyClass="EstudiantePK" abs="false" class="Estudiante" v="true" jbn="false" xre="false" m="false" rootElement="_16372452903359" id="_163724529450111">
+        <ath>USER</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="codigo" id="_163724530330914">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="nombre" id="_163724530951715">
+                <xwm/>
+                <xm/>
+            </basic>
+            <many-to-many own="true" collection-type="java.util.List" cit="java.util.ArrayList" connected-entity-id="_163724531431416" v="true" xvt="" name="materias" id="_163724536783522">
+                <xwm/>
+                <xm/>
+            </many-to-many>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_163724529450112">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Estudiante.findAll">
+            <query>Select e from Estudiante e</query>
+        </nq>
+        <nq e="false" name="Estudiante.findByCodigo}">
+            <query>Select e from Estudiante e where e.codigo}=:codigo}</query>
+        </nq>
+        <nq e="false" name="Estudiante.findByNombre">
+            <query>Select e from Estudiante e where e.nombre=:nombre</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="MateriaPK" abs="false" class="Materia" v="true" jbn="false" xre="false" m="false" rootElement="_16372452903359" id="_163724531431416">
+        <ath>USER</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="codigo" id="_163724532085519">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="nombre" id="_163724532657420">
+                <xwm/>
+                <xm/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_163724531431517">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Materia.findAll">
+            <query>Select e from Materia e</query>
+        </nq>
+        <nq e="false" name="Materia.findByCodigo">
+            <query>Select m from Materia m where m.codigo=:codigo</query>
+        </nq>
+        <nq e="false" name="Materia.findByNombre">
+            <query>Select m from Materia m where m.nombre=:nombre</query>
+        </nq>
+    </entity>
+    <c>
+        <ct>java.util.List</ct>
+        <ct>java.util.Set</ct>
+        <ct>java.util.Map</ct>
+        <ct>java.util.Collection</ct>
+        <cit>java.util.ArrayList</cit>
+        <cit>java.util.LinkedList</cit>
+        <cit>java.util.HashSet</cit>
+        <cit>java.util.TreeSet</cit>
+        <cit>java.util.HashMap</cit>
+    </c>
+    <wsl>
+        <ws n="Main" id="_163724529033510">
+            <i ref="_163724529450111" x="57" y="101"/>
+            <i ref="_163724531431416" x="496" y="77"/>
+        </ws>
+    </wsl>
+</entity-mappings>

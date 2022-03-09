@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<entity-mappings ptype="MONOLITH" ppkg="com.example.jpa.publish.model.mio" epkg="domain" v="5.4.2" rws="_16328747723952" Pws="_16328747723952" cws="_16328747723952" persistenceUnitName="DEFAULT_PU" sm="false" xs="false" id="_16328747723941" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <entity compositePrimaryKeyClass="UserPK" abs="false" class="User" v="true" jbn="false" xre="false" m="false" rootElement="_16328747723941" id="_16328747782513">
+        <ath>USER</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="username" id="_16328748075479">
+                <xwm/>
+                <xm/>
+            </basic>
+            <basic attribute-type="String" v="true" xvt="" name="password" id="_163287481928710">
+                <xwm/>
+                <xm/>
+            </basic>
+            <many-to-one optional="true" primaryKey="false" connected-entity-id="_16328747942126" v="true" xvt="" name="role" id="_163287501391618">
+                <xwm/>
+                <xm/>
+            </many-to-one>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_16328747782784">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="User.findAll">
+            <query>Select e from User e</query>
+        </nq>
+        <nq e="false" name="User.findByUsername">
+            <query>Select u from User u where u.username=:username</query>
+        </nq>
+        <nq e="false" name="User.findByPassword">
+            <query>Select u from User u where u.password=:password</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="RolePK" abs="false" class="Role" v="true" jbn="false" xre="false" m="false" rootElement="_16328747723941" id="_16328747942126">
+        <ath>USER</ath>
+        <attributes>
+            <basic attribute-type="String" v="true" xvt="" name="name" id="_163287487443413">
+                <xwm/>
+                <xm/>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_16328747942137">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Role.findAll">
+            <query>Select e from Role e</query>
+        </nq>
+        <nq e="false" name="Role.findByName">
+            <query>Select r from Role r where r.name=:name</query>
+        </nq>
+    </entity>
+    <entity compositePrimaryKeyClass="Entity_1PK" abs="false" class="Entity_1" v="true" jbn="false" xre="false" m="false" rootElement="_16328747723941" id="_164686248531132">
+        <ath>USER</ath>
+        <attributes>
+            <basic attribute-type="java.util.Date" v="true" xvt="" name="birthdate" id="_164686249353835">
+                <xwm/>
+                <xm/>
+                <temporal>DATE</temporal>
+            </basic>
+            <id attribute-type="Long" v="true" xvt="" name="id" id="_164686248531333">
+                <xwm/>
+                <xm/>
+                <generated-value strategy="DEFAULT"/>
+            </id>
+        </attributes>
+        <nq e="false" name="Entity_1.findAll">
+            <query>Select e from Entity_1 e</query>
+        </nq>
+        <nq e="false" name="Entity_1.findByBirthdate">
+            <query>Select e from Entity_1 e where e.birthdate=:birthdate</query>
+        </nq>
+    </entity>
+    <c>
+        <ct>java.util.List</ct>
+        <ct>java.util.Set</ct>
+        <ct>java.util.Map</ct>
+        <ct>java.util.Collection</ct>
+        <cit>java.util.ArrayList</cit>
+        <cit>java.util.LinkedList</cit>
+        <cit>java.util.HashSet</cit>
+        <cit>java.util.TreeSet</cit>
+        <cit>java.util.HashMap</cit>
+    </c>
+    <wsl>
+        <ws n="Main" id="_16328747723952">
+            <i ref="_164686248531132" x="380" y="306"/>
+            <i ref="_16328747942126" x="486" y="93"/>
+            <i ref="_16328747782513" x="170" y="80"/>
+        </ws>
+    </wsl>
+</entity-mappings>
