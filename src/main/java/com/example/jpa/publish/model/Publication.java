@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Publication {
+public abstract class Publication {
 	
 	@Id
 	@GeneratedValue (strategy = GenerationType.AUTO)
